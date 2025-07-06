@@ -30,6 +30,12 @@ body {
   font-size: 1rem;
   border: 2px solid #ccc;
   border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.searchbar:focus {
+  outline: none;
+  border-color: #4f46e5;
 }
 
 /* Card de personaje */
@@ -43,6 +49,7 @@ body {
   transition: transform 0.2s ease-in-out;
   text-decoration: none;
   color: inherit;
+  margin-bottom: 1rem;
 }
 
 .card:hover {
@@ -91,6 +98,62 @@ body {
   margin-bottom: 0.7rem;
 }
 
+.detail a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #4f46e5;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.detail a:hover {
+  background-color: #4338ca;
+}
+
+/* Estrella de favoritos */
+.star {
+  cursor: pointer;
+  color: #888;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.star.fav {
+  color: gold;
+}
+
+/* Cabecera */
+.header {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header a {
+  color: #fff;
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header a:hover {
+  text-decoration: underline;
+  color: #facc15; /* amarillo suave */
+}
+
 /* Responsividad */
 @media (max-width: 600px) {
   .card {
@@ -99,5 +162,10 @@ body {
 
   .searchbar {
     width: 90%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

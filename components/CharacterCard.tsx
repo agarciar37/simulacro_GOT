@@ -1,12 +1,14 @@
 import { FunctionComponent } from "preact";
 import { Character } from "../types.ts";
+import StarButton from "../islands/StarButton.tsx";
 
 type Props = {
-    character: Character
+    character: Character;
+    favorite: boolean
 }
 
 const CharacterCard: FunctionComponent<Props> = (props) => {
-    const {character} = props
+    const {character, favorite} = props
     return (
         <div class="card" >
             <a href={`/character/${character.id}`}>
@@ -15,6 +17,7 @@ const CharacterCard: FunctionComponent<Props> = (props) => {
                     <p>{character.fullName}</p>
                 </h2>
             </a>
+            <StarButton id={character.id} initial={favorite}/>
         </div>
     )
 }

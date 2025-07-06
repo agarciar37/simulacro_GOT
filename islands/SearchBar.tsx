@@ -1,4 +1,4 @@
-import { searchTerm } from "../signals/charactersSignal.ts";
+import { searchTerm } from "../utils/charactersSignal.ts";
 
 const SearchBar = () => {
   return (
